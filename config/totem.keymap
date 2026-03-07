@@ -29,10 +29,85 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_esc {
+        combo_f2 {
             timeout-ms = <50>;
             key-positions = <0 1>;
-            bindings = <&kp ESC>;
+            bindings = <&kp F2>;
+        };
+
+        combo_print_screen {
+            bindings = <&kp PRINTSCREEN>;
+            key-positions = <8 9>;
+        };
+
+        combo_undo {
+            bindings = <&kp K_UNDO>;
+            key-positions = <4 3>;
+        };
+
+        combo_cut {
+            bindings = <&kp K_COPY>;
+            key-positions = <13 14>;
+        };
+
+        combo_copy {
+            bindings = <&kp K_COPY>;
+            key-positions = <24 25>;
+        };
+
+        combo_paste {
+            bindings = <&kp K_PASTE>;
+            key-positions = <33 32>;
+        };
+
+        combo_vol_up {
+            bindings = <&kp C_VOL_UP>;
+            key-positions = <15 16>;
+        };
+
+        combo_vol_down {
+            bindings = <&kp C_VOL_DN>;
+            key-positions = <26 27>;
+        };
+
+        combo_caps_lock {
+            bindings = <&kp CAPS>;
+            key-positions = <36 37>;
+        };
+
+        combo_play {
+            bindings = <&kp C_PLAY>;
+            key-positions = <31 30>;
+        };
+
+        combo_prev {
+            bindings = <&kp C_PREV>;
+            key-positions = <28 29>;
+        };
+
+        combo_next {
+            bindings = <&kp C_NEXT>;
+            key-positions = <29 30>;
+        };
+
+        combo_comment {
+            bindings = <&start_com>;
+            key-positions = <21 22>;
+        };
+
+        combo_end_com {
+            bindings = <&end_com>;
+            key-positions = <22 23>;
+        };
+
+        combo_perm_nav {
+            bindings = <&tog 2>;
+            key-positions = <20 21>;
+        };
+
+        game_combo {
+            bindings = <&tog 3>;
+            key-positions = <35 36>;
         };
     };
 
