@@ -120,14 +120,28 @@
         em_dash: em_dash {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(KP_NUMBER_0) &kp LA(KP_NUMBER_1) &kp LA(KP_NUMBER_5) &kp LA(KP_NUMBER_1)>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_5 &kp KP_NUMBER_1>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
             label = "EM_DASH";
         };
 
         pound: the_pound {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(KP_NUMBER_1) &kp LA(KP_NUMBER_5) &kp LA(KP_NUMBER_6)>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_1 &kp KP_NUMBER_5 &kp KP_NUMBER_6>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
             label = "THE_POUND";
         };
 
@@ -175,10 +189,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &kp Q           &kp W           &kp F        &kp P             &kp B      &kp J      &kp L              &kp U                &kp Y           &kp APOS
-            &mt LEFT_WIN A  &mt LEFT_ALT R  &mt LCTRL S  &mt LEFT_SHIFT T  &kp G      &kp M      &mt RIGHT_SHIFT N  &mt RIGHT_CONTROL E  &mt LEFT_ALT I  &mt RIGHT_WIN O
-&kp ESCAPE  &kp X           &kp V           &kp C        &kp D             &kp K      &kp Z      &kp H              &kp COMMA            &kp DOT         &kp SEMICOLON    &kp RET
-                                            &mo 2        &mo 1             &kp TAB    &kp SPACE  &mo 1              &mo 2
+                     &kp Q           &kp W           &kp F        &kp P             &kp B      &kp J      &kp L              &kp U                &kp Y           &kp APOS
+                     &mt LEFT_WIN A  &mt LEFT_ALT R  &mt LCTRL S  &mt LEFT_SHIFT T  &kp G      &kp M      &mt RIGHT_SHIFT N  &mt RIGHT_CONTROL E  &mt LEFT_ALT I  &mt RIGHT_WIN O
+&mt LEFT_WIN ESCAPE  &kp X           &kp V           &kp C        &kp D             &kp K      &kp Z      &kp H              &kp COMMA            &kp DOT         &kp SEMICOLON    &mt RIGHT_WIN RET
+                                                     &mo 2        &mo 1             &kp TAB    &kp SPACE  &mo 1              &mo 2
             >;
         };
 
