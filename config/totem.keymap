@@ -106,7 +106,7 @@
         };
 
         game_combo {
-            bindings = <&tog 3>;
+            bindings = <&tog 4>;
             key-positions = <34 33>;
         };
 
@@ -364,11 +364,22 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &trans    &trans    &kp UP          &kp PAGE_UP  &kp INS    &kp KP_NUMLOCK   &kp KP_N7  &kp KP_N8  &kp KP_N9  &trans
-        &kp HOME  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT    &kp END    &trans           &kp KP_N4  &kp KP_N5  &kp KP_N6  &trans
-&trans  &trans    &trans    &trans          &kp PG_DN    &trans     &kp KP_NUMBER_0  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp COMMA  &kp PERIOD
-                            &trans          &trans       &trans     &trans           &trans     &trans
+        &trans    &trans    &kp UP          &kp PAGE_UP  &kp INS    &kp KP_NUMLOCK  &kp KP_N7   &kp KP_N8        &kp KP_N9  &trans
+        &kp HOME  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT    &kp END    &trans          &kp KP_N4   &kp KP_N5        &kp KP_N6  &trans
+&trans  &trans    &trans    &trans          &kp PG_DN    &trans     &trans          &kp KP_N1   &kp KP_N2        &kp KP_N3  &trans  &trans
+                            &trans          &trans       &trans     &kp KP_COMMA    &kp KP_DOT  &kp KP_NUMBER_0
             >;
+        };
+
+        function_layer {
+            bindings = <
+        &kp F2  &kp F3  &kp F4  &kp F5  &kp F6    &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans
+&kp F1  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans   &kp F12
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+
+            label = "FUN";
         };
 
         game_layer {
@@ -388,11 +399,20 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-         &kp TAB    &kp Q  &kp W     &kp E    &kp R        &kp T   &kp N7        &kp N8        &kp N9        &trans
-         &kp LSHFT  &kp A  &kp S     &kp D    &kp F        &kp G   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans
-&kp ESC  &kp LCTRL  &kp Z  &kp X     &kp C    &kp V        &kp B   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
-                           &kp LALT  &kp RET  &kp SPACE    &trans  &trans        &trans
+         &kp TAB    &kp Q  &kp W     &kp E    &kp R        &kp NUMBER_1  &kp NUMBER_2    &kp UP_ARROW    &kp NUMBER_3  &kp NUMBER_4
+         &kp LSHFT  &kp A  &kp S     &kp D    &kp F        &kp N5        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT     &kp NUMBER_6
+&kp ESC  &kp LCTRL  &kp Z  &kp X     &kp C    &kp V        &kp N7        &kp N8          &kp N9          &kp N0        &kp MINUS     &kp PLUS
+                           &kp LALT  &kp RET  &kp SPACE    &trans        &trans          &trans
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        both_layers {
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };
