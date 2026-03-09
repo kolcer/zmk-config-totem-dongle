@@ -215,6 +215,83 @@
             bindings = <&kp MINUS &kp MINUS &kp RBKT &kp RBKT>;
             label = "END_COM";
         };
+
+        office_pound: office_pound {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N0 &kp N0 &kp A &kp NUMBER_3 &kp LA(X)>;
+            label = "OFFICE_POUND";
+        };
+
+        pl_open_quote: pl_open_quote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_2>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "PL_OPEN_QUOTE";
+        };
+
+        pl_close_quote: pl_close_quote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_4 &kp KP_NUMBER_8>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "PL_CLOSE_QUOTE";
+        };
+
+        pl_open_inner: pl_open_inner {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_7 &kp KP_NUMBER_1>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "PL_OPEN_INNER";
+        };
+
+        pl_close_inner: pl_close_inner {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_8 &kp KP_NUMBER_7>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "PL_CLOSE_INNER";
+        };
+
+        pl_dots: pl_dots {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_0 &kp KP_NUMBER_1 &kp KP_NUMBER_3 &kp KP_NUMBER_3>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "PL_DOTS";
+        };
     };
 
     keymap {
@@ -239,10 +316,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                     &kp Q           &kp W           &kp F        &kp P             &kp B      &kp J      &kp L              &kp U                &kp Y           &kp APOS
-                     &mt LEFT_WIN A  &mt LEFT_ALT R  &mt LCTRL S  &mt LEFT_SHIFT T  &kp G      &kp M      &mt RIGHT_SHIFT N  &mt RIGHT_CONTROL E  &mt LEFT_ALT I  &mt RIGHT_WIN O
-&mt LEFT_WIN ESCAPE  &kp X           &kp V           &kp C        &kp D             &kp K      &kp Z      &kp H              &kp COMMA            &kp DOT         &kp SEMICOLON    &mt RIGHT_WIN RET
-                                                     &mo 2        &mo 1             &kp TAB    &kp SPACE  &mo 1              &mo 2
+            &kp Q           &kp W           &kp F        &kp P             &kp B      &kp J      &kp L              &kp U                &kp Y           &kp APOS
+            &mt LEFT_WIN A  &mt LEFT_ALT R  &mt LCTRL S  &mt LEFT_SHIFT T  &kp G      &kp M      &mt RIGHT_SHIFT N  &mt RIGHT_CONTROL E  &mt LEFT_ALT I  &mt RIGHT_WIN O
+&kp ESCAPE  &kp X           &kp V           &kp C        &kp D             &kp K      &kp Z      &kp H              &kp COMMA            &kp DOT         &kp COLON        &kp RET
+                                            &mo 2        &mo 1             &kp TAB    &kp SPACE  &mo 1              &mo 2
             >;
         };
 
@@ -263,10 +340,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                      &kp GRAVE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PLUS   &pound          &kp AMPERSAND  &kp PIPE   &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp EXCL
-                      &kp RA(A)  &kp RA(Z)             &kp RA(S)              &kp RA(C)  &kp ASTERISK    &kp AT_SIGN    &kp RA(N)  &kp RA(E)         &kp RA(L)          &kp RA(O)
-&kp NON_US_BACKSLASH  &tilde     &kp PERCENT           &kp CARET              &kp MINUS  &kp DOLLAR      &kp RA(X)      &kp HASH   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp QUESTION  &kp SLASH
-                                                       &kp EQUAL              &trans     &trans          &trans         &trans     &em_dash
+                &kp GRAVE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PLUS   &pound          &office_pound  &kp PIPE        &kp LEFT_BRACE   &kp RIGHT_BRACE  &em_dash
+                &tilde     &kp LESS_THAN         &kp GREATER_THAN       &kp EQUAL  &kp ASTERISK    &kp AT_SIGN    &kp UNDERSCORE  &kp LBKT         &kp RBKT         &kp QUESTION
+&pl_open_quote  &kp BSLH   &kp PERCENT           &kp CARET              &kp MINUS  &kp DOLLAR      &kp AMPS       &kp HASH        &kp SEMI         &kp EXCL         &kp FSLH      &pl_close_quote
+                                                 &pl_open_inner         &trans     &kp DELETE      &kp BACKSPACE  &pl_dots        &pl_close_inner
             >;
         };
 
@@ -287,10 +364,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &trans    &trans    &kp UP          &kp PAGE_UP  &kp INS       &kp KP_NUMLOCK   &kp KP_N7  &kp KP_N8  &kp KP_N9  &trans
-        &kp HOME  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT    &kp END       &trans           &kp KP_N4  &kp KP_N5  &kp KP_N6  &trans
-&trans  &trans    &trans    &trans          &kp PG_DN    &trans        &kp KP_NUMBER_0  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp COMMA  &kp PERIOD
-                            &trans          &trans       &kp DELETE    &kp BACKSPACE    &trans     &trans
+        &trans    &trans    &kp UP          &kp PAGE_UP  &kp INS    &kp KP_NUMLOCK   &kp KP_N7  &kp KP_N8  &kp KP_N9  &trans
+        &kp HOME  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT    &kp END    &trans           &kp KP_N4  &kp KP_N5  &kp KP_N6  &trans
+&trans  &trans    &trans    &trans          &kp PG_DN    &trans     &kp KP_NUMBER_0  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp COMMA  &kp PERIOD
+                            &trans          &trans       &trans     &trans           &trans     &trans
             >;
         };
 
@@ -313,7 +390,7 @@
             bindings = <
          &kp TAB    &kp Q  &kp W     &kp E    &kp R        &kp T   &kp N7        &kp N8        &kp N9        &trans
          &kp LSHFT  &kp A  &kp S     &kp D    &kp F        &kp G   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans
-&kp ESC  &kp LCTRL  &kp Z  &kp X     &kp C    &kp V        &kp N0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
+&kp ESC  &kp LCTRL  &kp Z  &kp X     &kp C    &kp V        &kp B   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
                            &kp LALT  &kp RET  &kp SPACE    &trans  &trans        &trans
             >;
         };
