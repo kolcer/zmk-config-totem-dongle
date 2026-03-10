@@ -112,7 +112,7 @@
 
         combo_caps_word {
             bindings = <&caps_word>;
-            key-positions = <13 16>;
+            key-positions = <34 35>;
         };
 
         combo_pl_a {
@@ -316,10 +316,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &kp Q           &kp W           &kp F        &kp P             &kp B      &kp J      &kp L              &kp U                &kp Y           &kp APOS
-            &mt LEFT_WIN A  &mt LEFT_ALT R  &mt LCTRL S  &mt LEFT_SHIFT T  &kp G      &kp M      &mt RIGHT_SHIFT N  &mt RIGHT_CONTROL E  &mt LEFT_ALT I  &mt RIGHT_WIN O
-&kp ESCAPE  &kp X           &kp V           &kp C        &kp D             &kp K      &kp Z      &kp H              &kp COMMA            &kp DOT         &kp COLON        &kp RET
-                                            &mo 2        &mo 1             &kp TAB    &kp SPACE  &mo 1              &mo 2
+                     &kp Q  &kp W           &kp F        &kp P  &kp B                 &kp J                  &kp L  &kp U                &kp Y           &kp APOS
+                     &kp A  &mt LEFT_ALT R  &mt LCTRL S  &kp T  &kp G                 &kp M                  &kp N  &mt RIGHT_CONTROL E  &mt LEFT_ALT I  &kp O
+&mt LEFT_WIN ESCAPE  &kp X  &kp V           &kp C        &kp D  &kp K                 &kp Z                  &kp H  &kp COMMA            &kp DOT         &kp COLON  &mt RIGHT_WIN RET
+                                            &mo 2        &mo 1  &mt LEFT_SHIFT TAB    &mt RIGHT_SHIFT SPACE  &mo 1  &mo 2
             >;
         };
 
@@ -373,9 +373,9 @@
 
         function_layer {
             bindings = <
-        &kp F2  &kp F3  &kp F4  &kp F5  &kp F6    &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans
-&kp F1  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans   &kp F12
+        &trans  &trans  &trans  &trans  &trans    &trans  &kp F7  &kp F8  &kp F9  &kp F12
+        &trans  &trans  &trans  &trans  &trans    &trans  &kp F4  &kp F5  &kp F6  &kp F11
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
 
