@@ -78,11 +78,13 @@
         combo_play {
             bindings = <&kp C_PLAY>;
             key-positions = <31 30>;
+            layers = <0 4 2>;
         };
 
         combo_prev {
             bindings = <&kp C_PREV>;
             key-positions = <28 29>;
+            layers = <0 2 4>;
         };
 
         combo_next {
@@ -103,6 +105,7 @@
         combo_perm_nav {
             bindings = <&tog 2>;
             key-positions = <20 21>;
+            layers = <2 0 4>;
         };
 
         game_combo {
@@ -163,6 +166,24 @@
         combo_redo {
             bindings = <&kp K_REDO>;
             key-positions = <5 6>;
+        };
+
+        combo_open_inner {
+            bindings = <&pl_open_inner>;
+            key-positions = <20 21>;
+            layers = <1>;
+        };
+
+        combo_close_inner {
+            bindings = <&pl_close_inner>;
+            key-positions = <30 31>;
+            layers = <1>;
+        };
+
+        combo_dots {
+            bindings = <&pl_dots>;
+            key-positions = <28 29>;
+            layers = <1>;
         };
     };
 
@@ -340,10 +361,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &kp GRAVE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PLUS   &pound          &office_pound  &kp PIPE        &kp LEFT_BRACE   &kp RIGHT_BRACE  &em_dash
-                &tilde     &kp LESS_THAN         &kp GREATER_THAN       &kp EQUAL  &kp ASTERISK    &kp AT_SIGN    &kp UNDERSCORE  &kp LBKT         &kp RBKT         &kp QUESTION
-&pl_open_quote  &kp BSLH   &kp PERCENT           &kp CARET              &kp MINUS  &kp DOLLAR      &kp AMPS       &kp HASH        &kp SEMI         &kp EXCL         &kp FSLH      &pl_close_quote
-                                                 &pl_open_inner         &trans     &kp DELETE      &kp BACKSPACE  &pl_dots        &pl_close_inner
+                &kp GRAVE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PLUS   &pound          &office_pound  &kp PIPE        &kp LEFT_BRACE  &kp RIGHT_BRACE  &em_dash
+                &tilde     &kp LESS_THAN         &kp GREATER_THAN       &kp EQUAL  &kp ASTERISK    &kp AT_SIGN    &kp UNDERSCORE  &kp LBKT        &kp RBKT         &kp QUESTION
+&pl_open_quote  &kp BSLH   &kp PERCENT           &kp CARET              &kp MINUS  &kp DOLLAR      &kp AMPS       &kp HASH        &kp SEMI        &kp EXCL         &kp FSLH      &pl_close_quote
+                                                 &trans                 &trans     &kp DELETE      &kp BACKSPACE  &trans          &trans
             >;
         };
 
@@ -364,10 +385,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &trans    &trans    &kp UP          &kp PAGE_UP  &kp INS    &kp KP_NUMLOCK  &kp KP_N7   &kp KP_N8        &kp KP_N9  &trans
-        &kp HOME  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT    &kp END    &trans          &kp KP_N4   &kp KP_N5        &kp KP_N6  &trans
-&trans  &trans    &trans    &trans          &kp PG_DN    &trans     &trans          &kp KP_N1   &kp KP_N2        &kp KP_N3  &trans  &trans
-                            &trans          &trans       &trans     &kp KP_COMMA    &kp KP_DOT  &kp KP_NUMBER_0
+        &trans    &trans    &kp UP          &kp PAGE_UP  &kp INS    &kp KP_NUMLOCK   &kp KP_N7  &kp KP_N8  &kp KP_N9  &trans
+        &kp HOME  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT    &kp END    &trans           &kp KP_N4  &kp KP_N5  &kp KP_N6  &trans
+&trans  &trans    &trans    &trans          &kp PG_DN    &trans     &kp KP_NUMBER_0  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_COMMA  &kp KP_DOT
+                            &trans          &trans       &trans     &trans           &trans     &trans
             >;
         };
 
