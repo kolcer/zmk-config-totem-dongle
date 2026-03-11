@@ -337,10 +337,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                     &kp Q  &kp W           &kp F        &kp P  &kp B                 &kp J                  &kp L  &kp U                &kp Y           &kp APOS
-                     &kp A  &mt LEFT_ALT R  &mt LCTRL S  &kp T  &kp G                 &kp M                  &kp N  &mt RIGHT_CONTROL E  &mt LEFT_ALT I  &kp O
-&mt LEFT_WIN ESCAPE  &kp X  &kp V           &kp C        &kp D  &kp K                 &kp Z                  &kp H  &kp COMMA            &kp DOT         &kp COLON  &mt RIGHT_WIN RET
-                                            &mo 2        &mo 1  &mt LEFT_SHIFT TAB    &mt RIGHT_SHIFT SPACE  &mo 1  &mo 2
+                     &mt LEFT_CONTROL Q  &kp W  &kp F  &kp P               &kp B           &kp J            &kp L                  &kp U                &kp Y           &mt RIGHT_CONTROL APOS
+                     &kp A               &kp R  &kp S  &kp T               &kp G           &kp M            &kp N                  &mt RIGHT_CONTROL E  &mt LEFT_ALT I  &kp O
+&mt LEFT_WIN ESCAPE  &mt LEFT_ALT X      &kp V  &kp C  &kp D               &kp K           &kp Z            &kp H                  &kp COMMA            &kp DOT         &mt LEFT_ALT COLON      &mt RIGHT_WIN RET
+                                                &mo 2  &mt LEFT_SHIFT TAB  &lt 2 DELETE    &lt 2 BACKSPACE  &mt RIGHT_SHIFT SPACE  &mo 2
             >;
         };
 
@@ -364,7 +364,7 @@
                 &kp GRAVE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PLUS   &pound          &office_pound  &kp PIPE        &kp LEFT_BRACE  &kp RIGHT_BRACE  &em_dash
                 &tilde     &kp LESS_THAN         &kp GREATER_THAN       &kp EQUAL  &kp ASTERISK    &kp AT_SIGN    &kp UNDERSCORE  &kp LBKT        &kp RBKT         &kp QUESTION
 &pl_open_quote  &kp BSLH   &kp PERCENT           &kp CARET              &kp MINUS  &kp DOLLAR      &kp AMPS       &kp HASH        &kp SEMI        &kp EXCL         &kp FSLH      &pl_close_quote
-                                                 &trans                 &trans     &kp DELETE      &kp BACKSPACE  &trans          &trans
+                                                 &trans                 &trans     &trans          &trans         &trans          &trans
             >;
         };
 
