@@ -41,22 +41,22 @@
         };
 
         combo_undo {
-            bindings = <&kp K_UNDO>;
+            bindings = <&kp C_AC_UNDO>;
             key-positions = <4 3>;
         };
 
         combo_cut {
-            bindings = <&kp K_COPY>;
+            bindings = <&kp C_AC_CUT>;
             key-positions = <13 14>;
         };
 
         combo_copy {
-            bindings = <&kp K_COPY>;
+            bindings = <&kp C_AC_COPY>;
             key-positions = <24 25>;
         };
 
         combo_paste {
-            bindings = <&kp K_PASTE>;
+            bindings = <&kp C_AC_PASTE>;
             key-positions = <33 32>;
         };
 
@@ -164,7 +164,7 @@
         };
 
         combo_redo {
-            bindings = <&kp K_REDO>;
+            bindings = <&kp C_AC_REDO>;
             key-positions = <5 6>;
         };
 
@@ -394,10 +394,10 @@
 
         function_layer {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &kp F7  &kp F8  &kp F9  &kp F12
-        &trans  &trans  &trans  &trans  &trans    &trans  &kp F4  &kp F5  &kp F6  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+        &kp F2  &kp F3  &kp F4  &kp F5  &kp F6    &kp F7  &kp F8     &kp F9     &kp F10  &kp F11
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans     &trans   &trans
+&kp F1  &trans  &trans  &trans  &trans  &trans    &trans  &kp KP_N0  &kp COMMA  &kp DOT  &trans   &kp F12
+                        &trans  &trans  &trans    &trans  &trans     &trans
             >;
 
             label = "FUN";
