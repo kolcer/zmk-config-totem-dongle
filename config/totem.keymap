@@ -41,22 +41,22 @@
         };
 
         combo_undo {
-            bindings = <&kp C_AC_UNDO>;
+            bindings = <&kp LC(Z)>;
             key-positions = <4 3>;
         };
 
         combo_cut {
-            bindings = <&kp C_AC_CUT>;
+            bindings = <&kp LC(X)>;
             key-positions = <13 14>;
         };
 
         combo_copy {
-            bindings = <&kp C_AC_COPY>;
+            bindings = <&kp LC(C)>;
             key-positions = <24 25>;
         };
 
         combo_paste {
-            bindings = <&kp C_AC_PASTE>;
+            bindings = <&kp RC(V)>;
             key-positions = <33 32>;
         };
 
@@ -160,11 +160,11 @@
 
         combo_pl_x {
             bindings = <&kp RA(X)>;
-            key-positions = <28 26>;
+            key-positions = <26 16>;
         };
 
         combo_redo {
-            bindings = <&kp C_AC_REDO>;
+            bindings = <&kp LC(Y)>;
             key-positions = <5 6>;
         };
 
