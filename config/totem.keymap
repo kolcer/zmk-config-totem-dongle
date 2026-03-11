@@ -115,7 +115,7 @@
 
         combo_caps_word {
             bindings = <&caps_word>;
-            key-positions = <34 35>;
+            key-positions = <33 36>;
         };
 
         combo_pl_a {
@@ -337,9 +337,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                     &mt LEFT_CONTROL Q  &kp W  &kp F  &kp P               &kp B           &kp J            &kp L                  &kp U                &kp Y           &mt RIGHT_CONTROL APOS
-                     &kp A               &kp R  &kp S  &kp T               &kp G           &kp M            &kp N                  &mt RIGHT_CONTROL E  &mt LEFT_ALT I  &kp O
-&mt LEFT_WIN ESCAPE  &mt LEFT_ALT X      &kp V  &kp C  &kp D               &kp K           &kp Z            &kp H                  &kp COMMA            &kp DOT         &mt LEFT_ALT COLON      &mt RIGHT_WIN RET
+                     &mt LEFT_CONTROL Q  &kp W  &kp F  &kp P               &kp B           &kp J            &kp L                  &kp U      &kp Y    &mt RIGHT_CONTROL APOS
+                     &kp A               &kp R  &kp S  &kp T               &kp G           &kp M            &kp N                  &kp E      &kp I    &kp O
+&mt LEFT_WIN ESCAPE  &mt LEFT_ALT X      &kp V  &kp C  &kp D               &kp K           &kp Z            &kp H                  &kp COMMA  &kp DOT  &mt LEFT_ALT COLON      &mt RIGHT_WIN RET
                                                 &mo 2  &mt LEFT_SHIFT TAB  &lt 2 DELETE    &lt 2 BACKSPACE  &mt RIGHT_SHIFT SPACE  &mo 2
             >;
         };
