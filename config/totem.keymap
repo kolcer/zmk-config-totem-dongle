@@ -185,13 +185,13 @@
         };
 
         combo_nav_comma {
-            bindings = <&pl_dots>;
+            bindings = <&kp COMMA>;
             key-positions = <28 27>;
             layers = <2>;
         };
 
         combo_nav_dot {
-            bindings = <&pl_dots>;
+            bindings = <&kp PERIOD>;
             key-positions = <28 29>;
             layers = <2>;
         };
