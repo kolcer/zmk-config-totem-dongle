@@ -161,6 +161,7 @@
         combo_dots {
             bindings = <&pl_dots>;
             key-positions = <28 29>;
+            layers = <0>;
         };
 
         combo_nav_dot {
