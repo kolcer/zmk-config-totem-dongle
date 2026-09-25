@@ -40,12 +40,11 @@
             layers = <2 0 4>;
         };
 
-        combo_f2 {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp F2>;
+        combo_print_screen {
+            bindings = <&kp PRINTSCREEN>;
+            key-positions = <2 3>;
         };
-
+ 
         combo_comment {
             bindings = <&start_com>;
             key-positions = <10 11>;
@@ -71,9 +70,10 @@
             key-positions = <22 23>;
         };
 
-        combo_print_screen {
-            bindings = <&kp PRINTSCREEN>;
-            key-positions = <2 3>;
+       combo_f2 {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp F2>;
         };
 
         combo_pl_s {
